@@ -1,1 +1,0 @@
-# solarpowerhealth-3
