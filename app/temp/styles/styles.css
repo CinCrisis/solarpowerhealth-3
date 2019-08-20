@@ -523,6 +523,7 @@ hr{
 		left: 0;
 		width: 100%;
 		text-align: center;
+		z-index: 11;
 	}
 
 @media (min-width: 800px) {
@@ -538,6 +539,18 @@ hr{
 			margin-top: -50px
 	}
 	}
+
+.masthead:after {
+  content: "";
+  display: block;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(59, 21, 63, 0.2);
+}
 
 .btn {
 	background-color: #d56954;
@@ -1240,49 +1253,10 @@ hr{
 	}
 
 .testimonial {
-	background-color: rgba(255, 255, 255, .8);
-	padding: 0 18px 1px 18px;
-	margin-bottom: 98px;
+	background-color: rgba(59, 21, 63, .8);
+	padding: 0;
+	margin: 0;
 }
-
-@media (min-width: 1010px) {
-
-.testimonial {
-		padding: 0 1.8125rem 1px 1.8125rem;
-		margin-bottom: 0px
-}
-	}
-
-.testimonial--last {
-		margin-bottom: 0;
-	}
-
-.testimonial__photo {
-		position: relative;
-		top: -80px;
-		border: 6px solid rgba(255, 255, 255, .8);
-		border-radius: 80px;
-		overflow: hidden;
-		width: 160px;
-		height: 160px;
-		margin: 0 auto -80px auto;
-	}
-
-.testimonial__title {
-		color: #222222;
-		text-align: center;
-		font-size: 1.5rem;
-		font-weight: 500;
-		margin: 0;
-	}
-
-.testimonial__subtitle {
-		color: #222222;
-		text-align: center;
-		font-weight: 400;
-		font-size: .9375rem;
-		margin: .25rem 0 1rem 0;
-	}
 
 /* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
 Instead edit gulp/templates/sprite. */
