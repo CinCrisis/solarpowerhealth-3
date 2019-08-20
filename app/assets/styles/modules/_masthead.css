@@ -1,0 +1,33 @@
+.masthead {
+	border-bottom: 1px solid $darkGrey;
+	box-shadow: 0 6px 6px -8px #222;
+	position: relative;
+
+&__image {
+	display: block;
+}
+
+	&__img-bg {
+		width: 100%;
+	}
+
+	&__inside-content {
+
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		width: 100%;
+		text-align: center;
+
+		@mixin atMedium {
+			margin-top: -20px;
+		}
+
+		@mixin atLarge {
+			margin-top: -50px;			
+		}
+	}
+
+}
+

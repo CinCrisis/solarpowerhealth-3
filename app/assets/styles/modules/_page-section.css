@@ -1,0 +1,63 @@
+.page-section {
+	padding: 3.125rem 0 3.125rem 0;
+
+	&--first {
+		padding: 3.125rem 0 3rem 0;		
+	}
+
+	@mixin atSmall {
+		&--first {
+			padding: 6.125rem 0 5rem 0;
+		}
+		
+		&--last {
+			padding: 6.125rem 0 0 0;
+		}
+		
+		padding: 5.625rem 0 5.625rem 0;
+	}
+
+	@mixin atMedium {	
+
+	padding: 5.625rem 0 5.625rem 0;
+	}	
+
+	&--last {
+		padding: 3.125rem 0 2px 0;
+
+		@mixin atSmall {
+			padding: 5.625rem 0 2px 0;			
+		}
+	}
+
+	&--no-b-padding-until-medium {
+		padding-bottom: 0;
+
+		@mixin atMedium {
+			padding-bottom: 4.5rem;
+		}
+	}
+	
+	&--no-b-padding-until-large {
+		padding-bottom: 0;
+
+		@mixin atLarge {
+			padding-bottom: 4.5rem;
+		}
+	}
+
+	&--cta {
+		background-color: $lightPeach;
+		text-align: center;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		p {
+			margin: 2.5rem 0 2.5rem 0;
+		}
+	}
+}

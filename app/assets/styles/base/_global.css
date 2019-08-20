@@ -1,0 +1,46 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #222;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.img-full-wdith {
+	width: 100%;
+	height: auto;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: $mainCoral;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $mainViolet;
+}
+
+p {
+	margin: 0;
+}
+
+hr{
+    border:0;
+    margin: 0;
+    height:21px;
+    background:url('../../assets/images/hr-img.png') no-repeat top center;
+/*    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+
+    @mixin atSmall {
+	    margin-top: 5rem;
+	    margin-bottom: 2.5rem;
+	}
+*/
+}
