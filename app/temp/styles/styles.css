@@ -606,6 +606,32 @@ hr{
 		margin: 0;
 	}
 
+.wrapper--footer {
+		min-height: 250px;
+		max-width: 1000px;
+		margin-top: 50px;
+		padding-left: 100px;
+	}
+
+@media (min-width: 800px) {
+
+.wrapper--footer {
+			margin-top: 100px
+	}
+	}
+
+.wrapper--footer > div {
+		line-height: 1.9rem;
+		text-align: left;
+		font-size: .9rem;
+		font-weight: 200;
+		padding-bottom: 35px;
+	}
+
+.wrapper--footer > div a { 
+			color: #fff;
+		}
+
 .wrapper--no-padding-until-medium {
 		padding-left: 0;
 		padding-right: 0;
@@ -622,6 +648,7 @@ hr{
 .wrapper--no-padding-until-large {
 		padding-left: 0;
 		padding-right: 0;
+
 	}
 
 @media (min-width: 1010px) {
@@ -629,7 +656,14 @@ hr{
 .wrapper--no-padding-until-large {
 			padding-left: 18px;
 			padding-right: 18px
+
 	}
+	}
+
+.wrapper--no-padding-until-large--footer {
+		max-width: 100%;
+		padding: 0;
+		margin: 0;
 	}
 
 .wrapper--b-margin {
@@ -1262,91 +1296,92 @@ hr{
 Instead edit gulp/templates/sprite. */
 
 .icon {
-			background-image: url('../../assets/images/sprites/sprite-e79e95cc.svg');
+			background-image: url('../../assets/images/sprites/sprite-e02f11b4.svg');
 		}
 
 .no-svg .icon {
-			background-image: url('../../assets/images/sprites/sprite-e79e95cc.png');
+			background-image: url('../../assets/images/sprites/sprite-e02f11b4.png');
 		}
 
-.icon--clear-view-escapes {
-		width: 144.4px;
-		height: 61.53px;
-		background-position: 0 0;
-	}
-
-.icon--comment {
-		width: 66px;
-		height: 66px;
-		background-position: 99.71014492753623% 0;
-	}
-
 .icon--facebook {
-		width: 23.23px;
-		height: 44.01px;
-		background-position: 26.424310365536293% 45.92133741323979%;
+		width: 47px;
+		height: 47px;
+		background-position: 0 100%;
 	}
 
-.icon--fire {
-		width: 58px;
-		height: 66px;
-		background-position: 0 99.58035714285714%;
-	}
-
-.icon--globe {
-		width: 66px;
-		height: 66px;
-		background-position: 28.019323671497585% 99.58035714285714%;
+.icon--hr-flower {
+		width: 131px;
+		height: 23px;
+		background-position: 100% 0;
 	}
 
 .icon--instagram {
-		width: 44.01px;
-		height: 44.01px;
-		background-position: 63.059522249879905% 49.25740726919919%;
+		width: 47px;
+		height: 47px;
+		background-position: 8.020477815699659% 100%;
 	}
 
-.icon--mail {
-		width: 66px;
-		height: 50px;
-		background-position: 0 48.0703125%;
+.icon--logo-empty-white {
+		width: 502px;
+		height: 503px;
+		background-position: 0 0;
 	}
 
-.icon--rain {
-		width: 66px;
-		height: 66px;
-		background-position: 99.71014492753623% 58.92857142857143%;
+.icon--search-icon {
+		width: 27px;
+		height: 27px;
+		background-position: 99.66996699669967% 34.608030592734224%;
 	}
 
-.icon--star {
-		width: 66px;
-		height: 66px;
-		background-position: 59.90338164251208% 99.58035714285714%;
+.icon--sph-icons-classes {
+		width: 102px;
+		height: 102px;
+		background-position: 94.53860640301318% 40.401785714285715%;
 	}
 
-.icon--twitter {
-		width: 53.78px;
-		height: 44.06px;
-		background-position: 94.15199343125627% 98.55159026429745%;
+.icon--sph-icons-relaxation {
+		width: 102px;
+		height: 102px;
+		background-position: 94.53860640301318% 63.169642857142854%;
 	}
 
-.icon--wifi {
-		width: 62px;
-		height: 66px;
-		background-position: 68.43601895734596% 0;
+.icon--sph-icons-soundbaths {
+		width: 111px;
+		height: 101px;
+		background-position: 96.16858237547893% 17.817371937639198%;
 	}
 
-.icon--youtube {
-		width: 36.75px;
-		height: 44px;
-		background-position: 37.76931216931217% 45.917910447761194%;
+.icon--sph-icons-workshops {
+		width: 102px;
+		height: 102px;
+		background-position: 94.53860640301318% 85.9375%;
+	}
+
+.icon--sph-logo-small {
+		width: 120px;
+		height: 57px;
+		background-position: 97.85575048732943% 4.665314401622718%;
 	}
 
 .site-footer {
+	position: relative;
 	background-color: #d56954;
-	min-height: 380px;
+	min-height: 400px;
 	color: #fff;
-	padding: .5rem 0;
+	padding: 0 0;
 	text-align: center;
+	overflow: hidden;
+
+
+/*	&--empty-logo {
+		display: block;
+		position: absolute;
+		top: -66%;
+		left: -20%;
+		opacity: 0.2;
+		filter: alpha(opacity=20);
+	}
+*/
 }
 
 .site-footer__text {
@@ -1362,6 +1397,48 @@ Instead edit gulp/templates/sprite. */
 			margin-bottom: 0;
 			margin-right: 1.4rem
 	}
+	}
+
+.site-footer--social-icon {
+		display: block;
+		width: 47px;
+		height: 47px;
+		float: left;
+		margin: 0.5rem 0.5rem 0 0;
+	}
+
+.site-footer--small-text {
+		font-size: .7rem;
+		line-height: 1.2rem;
+		font-weight: 300;
+	}
+
+/* .site-footer:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -66%;
+	left: -20%;
+	opacity: 0.2;
+	filter: alpha(opacity=20);	
+}
+*/
+
+.icon--logo-empty-white {
+
+	display: none;
+}
+
+@media (min-width: 1010px) {
+
+.icon--logo-empty-white {
+		display: block;
+		position: absolute;
+		top: -66%;
+		left: -20%;
+		opacity: 0.3;
+		filter: alpha(opacity=30)
+}
 	}
 
 .site-header {

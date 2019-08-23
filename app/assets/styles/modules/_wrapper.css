@@ -25,6 +25,29 @@
 		margin: 0;
 	}
 
+	&--footer {
+		min-height: 250px;
+		max-width: 1000px;
+		margin-top: 50px;
+		padding-left: 100px;
+
+		@mixin atMedium {
+			margin-top: 100px;			
+		}
+	}
+
+	&--footer > div {
+		line-height: 1.9rem;
+		text-align: left;
+		font-size: .9rem;
+		font-weight: 200;
+		padding-bottom: 35px;
+
+		a { 
+			color: #fff;
+		}
+	}
+
 	&--no-padding-until-medium {
 		padding-left: 0;
 		padding-right: 0;
@@ -43,6 +66,13 @@
 			padding-left: 18px;
 			padding-right: 18px;			
 		}
+
+	&--footer {
+		max-width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
 	}
 
 	&--b-margin {

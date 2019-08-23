@@ -1,9 +1,11 @@
 .site-footer {
+	position: relative;
 	background-color: $mainCoral;
-	min-height: 380px;
+	min-height: 400px;
 	color: #fff;
-	padding: .5rem 0;
+	padding: 0 0;
 	text-align: center;
+	overflow: hidden;
 
 	&__text {
 		display: block; 
@@ -15,5 +17,56 @@
 			margin-bottom: 0;
 			margin-right: 1.4rem;
 		}
+	}
+
+	&--social-icon {
+		display: block;
+		width: 47px;
+		height: 47px;
+		float: left;
+		margin: 0.5rem 0.5rem 0 0;
+	}
+
+	&--small-text {
+		font-size: .7rem;
+		line-height: 1.2rem;
+		font-weight: 300;
+	}
+
+
+/*	&--empty-logo {
+		display: block;
+		position: absolute;
+		top: -66%;
+		left: -20%;
+		opacity: 0.2;
+		filter: alpha(opacity=20);
+	}
+*/
+}
+
+/* .site-footer:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -66%;
+	left: -20%;
+	opacity: 0.2;
+	filter: alpha(opacity=20);	
+}
+*/
+
+
+.icon--logo-empty-white {
+
+	display: none;
+
+	@mixin atLarge {
+		display: block;
+		position: absolute;
+		top: -66%;
+		left: -20%;
+		opacity: 0.3;
+		filter: alpha(opacity=30);
 	}
 }
