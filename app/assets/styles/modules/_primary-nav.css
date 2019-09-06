@@ -1,55 +1,72 @@
 .primary-nav {
-	padding-top: 10px;
+	padding-top: 25px;
 
-	@mixin atMedium {
+	@mixin atLarge {
 		padding-top: 0;
 	}
 
-	&--pull-right {
+	&--center-list {
 
-		@mixin atMedium {
-			float: right;
+		text-align: center;
+
+		ul {
+			display: inline-block;
+	        margin: 0;
+	        padding: 0;
+		}
+
+		li {
+			padding: 25px 0; 
+
+			@mixin atLarge {
+				padding: 43px 0;
+			}
+		}
+
+		@mixin atLarge {
+			float: left;
+			width: 59%;
+			max-width: 1000px;
 		}
 	}
 
 	ul {
 		margin: 0;
 		padding: 0;
-		@mixin clearfix;
 	}
 
 	li {
 		list-style: none;
-		padding-right: 7px;
-		display: inline-block;
 
-		@mixin atMedium {
+		@mixin atLarge {
 			display: block;
 			float: left;
-			padding-right: 20px;
+			padding-right: 50px;
+			display: inline-block;
 		}
 	}
 
 	li:last-child {
 		padding-right: 0;
 
-		@mixin atMedium {
-			padding-right: 20px;
+		@mixin atLarge {
+			padding-right: 0px;
 		}
 	}
 
 	a {
-		color: #fff;
-		font-weight: 300;
+		color: $darkGrey;
+		font-weight: 100;
 		text-decoration: none;
+		text-transform: uppercase;
 		display: block;
-		padding: 5px 8px;
-		font-size: .8rem;
-		background-color: rgba($darkGrey, .5);
+		font-size: 1.5rem;
+		margin: 0;
 
-		@mixin atMedium {
-			padding: 12px 0;			
-			font-size: 1rem;
+		@mixin atLarge {
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: .85rem;
 			background-color: transparent;
 
 			&.is-current-link {

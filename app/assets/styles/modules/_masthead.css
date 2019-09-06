@@ -19,7 +19,7 @@
 		left: 0;
 		width: 100%;
 		text-align: center;
-		z-index: 11;
+		z-index: 5;
 
 		@mixin atMedium {
 			margin-top: -20px;
