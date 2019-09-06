@@ -6,6 +6,7 @@
 	
 	@mixin atLarge {
 		min-height: 100px;		
+		box-shadow: 0 6px 6px -8px #222;
 	}
 
 
@@ -60,6 +61,7 @@
 		@mixin atLarge {
 			float: right;
 			margin-top: 36px;
+			margin-bottom: 0; 
 		}
 	}
 

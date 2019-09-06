@@ -1456,7 +1456,9 @@ Instead edit gulp/templates/sprite. */
 @media (min-width: 1010px) {
 
 .site-header {
-		min-height: 100px
+		min-height: 100px;		
+		-webkit-box-shadow: 0 6px 6px -8px #222;		
+		        box-shadow: 0 6px 6px -8px #222
 }
 	}
 
@@ -1520,7 +1522,8 @@ Instead edit gulp/templates/sprite. */
 
 .site-header--search {
 			float: right;
-			margin-top: 36px
+			margin-top: 36px;
+			margin-bottom: 0
 	}
 	}
 
@@ -1716,7 +1719,7 @@ Instead edit gulp/templates/sprite. */
 		text-decoration: none;
 		text-transform: uppercase;
 		display: block;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		margin: 0;
 	}
 
