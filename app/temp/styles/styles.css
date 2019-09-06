@@ -523,7 +523,7 @@ hr{
 		left: 0;
 		width: 100%;
 		text-align: center;
-		z-index: 11;
+		z-index: 5;
 	}
 
 @media (min-width: 800px) {
@@ -548,7 +548,7 @@ hr{
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 10;
+  z-index: 4;
   background-color: rgba(59, 21, 63, 0.2);
 }
 
@@ -604,6 +604,10 @@ hr{
 		max-width: 100vw;
 		padding: 0;
 		margin: 0;
+	}
+
+.wrapper__header {
+		padding: 0;
 	}
 
 .wrapper--footer {
@@ -1442,23 +1446,31 @@ Instead edit gulp/templates/sprite. */
 	}
 
 .site-header {
-	padding: 10px 0;
 	position: absolute;
-	z-index: 2;
+	z-index: 6;
 	width: 100%;
 	-webkit-transition: background-color .3s ease-out;
 	transition: background-color .3s ease-out;
 }
 
-.site-header--is-expanded {
-		background-color: rgba(34,34,34, .55);
+@media (min-width: 1010px) {
+
+.site-header {
+		min-height: 100px
+}
 	}
 
-@media (min-width: 800px) {
+.site-header--is-expanded {
+		background-color: #FFF;
+		-webkit-box-shadow: 0 6px 6px -8px #222;
+		        box-shadow: 0 6px 6px -8px #222;
+	}
+
+@media (min-width: 1010px) {
 
 .site-header {
 		position: fixed;
-		background-color: rgba(34,34,34, .3)
+		background-color: #fff
 }
 
 		.site-header--dark {
@@ -1466,54 +1478,59 @@ Instead edit gulp/templates/sprite. */
 		}
 	}
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
-.site-header__btn-container {
-			float: right
+.site-header__search-container {
+			width: 20%;
+			float: left;
+			text-align: right
 	}
 	}
 
 .site-header__logo {
-		position: absolute;
-		background-color: #222222;
-		left: 50%;
-		-webkit-transform: translateX(-50%) scale(.8);
-		        transform: translateX(-50%) scale(.8);
-		-webkit-transition: -webkit-transform .3s ease-out;
-		transition: -webkit-transform .3s ease-out;
-		transition: transform .3s ease-out;
-		transition: transform .3s ease-out, -webkit-transform .3s ease-out;
-		-webkit-transform-origin: 50% 0;
-		        transform-origin: 50% 0;
-		padding: 25px 36px;
-		top: 0;
+		width: 100%;
 	}
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .site-header__logo {
 			left: auto;
-			-webkit-transform: translateX(0);
-			        transform: translateX(0)
+			width: 20%;
+			float: left;
+			padding: 21px 0;
+			top: 0
 	}
-
-			.site-header--dark .site-header__logo {
-				-webkit-transform: scale(.56);
-				        transform: scale(.56);
-			}
 	}
 
 .site-header__logo__graphic {
 		text-indent: -9999px;
 	}
 
+.site-header__logo-small-center {
+		margin: 0 auto;
+		display: block;
+	}
+
+.site-header--search {
+		display: block;
+		margin: 25px auto 50px auto;
+	}
+
+@media (min-width: 1010px) {
+
+.site-header--search {
+			float: right;
+			margin-top: 36px
+	}
+	}
+
 .site-header__menu-icon {
-		width: 20px;
-		height: 19px;
+		width: 40px;
+		height: 27px;
 		position: absolute;
-		z-index: 10;
-		top: 10px;
-		right: 10px;
+		z-index: 20;
+		top: 25px;
+		right: 25px;
 	}
 
 .site-header__menu-icon::before {
@@ -1521,22 +1538,20 @@ Instead edit gulp/templates/sprite. */
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 20px;
+			width: 40px;
 			height: 3px;
 			background-color: #FFF;
 			-webkit-transform-origin: 0 0;
 			        transform-origin: 0 0;
-			-webkit-transition: -webkit-transform .3s ease-out;
-			transition: -webkit-transform .3s ease-out;
-			transition: transform .3s ease-out;
-			transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+			-webkit-transition: all .3s ease-out;
+			transition: all .3s ease-out;
 		}
 
 .site-header__menu-icon__middle {
 			position: absolute;
-			top: 8px;
+			top: 12px;
 			left: 0;
-			width: 20px;
+			width: 40px;
 			height: 3px;
 			background-color: #FFF;
 			-webkit-transition: all .3s ease-out;
@@ -1550,18 +1565,16 @@ Instead edit gulp/templates/sprite. */
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			width: 20px;
+			width: 40px;
 			height: 3px;
 			background-color: #FFF;
 			-webkit-transform-origin: 0 100%;
 			        transform-origin: 0 100%;
-			-webkit-transition: -webkit-transform .3s ease-out;
-			transition: -webkit-transform .3s ease-out;
-			transition: transform .3s ease-out;
-			transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+			-webkit-transition: all .3s ease-out;
+			transition: all .3s ease-out;
 		}
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .site-header__menu-icon {
 			display: none
@@ -1569,19 +1582,22 @@ Instead edit gulp/templates/sprite. */
 	}
 
 .site-header__menu-icon--close-x::before {
-			-webkit-transform: rotate(45deg) scaleX(1.25);
-			        transform: rotate(45deg) scaleX(1.25);
+			background-color: #888888;
+			-webkit-transform: rotate(31deg) scaleX(1.25);
+			        transform: rotate(31deg) scaleX(1.25);
 		}
 
 .site-header__menu-icon--close-x .site-header__menu-icon__middle {
+			background-color: #888888;
 			opacity: 0;
 			-webkit-transform: scaleX(0);
 			        transform: scaleX(0);
 		}
 
 .site-header__menu-icon--close-x::after {
-			-webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-			        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+			background-color: #888888;
+			-webkit-transform: rotate(-31deg) scaleX(1.25) translateY(1px);
+			        transform: rotate(-31deg) scaleX(1.25) translateY(1px);
 		}
 
 .site-header__menu-content {
@@ -1593,42 +1609,74 @@ Instead edit gulp/templates/sprite. */
 		position: relative;
 		z-index: -10;
 		padding-top: 90px;
-		text-align: center;
 	}
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .site-header__menu-content {
 			opacity: 1;
 			z-index: 1;
 			padding-top: 0;
 			-webkit-transform: scale(1);
-			        transform: scale(1)
+			        transform: scale(1);
+			text-align: center
 	}
 	}
 
 .site-header__menu-content--is-visible {
 			opacity: 1;
-			z-index: 1;
+			z-index: 13;
 			-webkit-transform: scale(1);
 			        transform: scale(1);
+			padding-top: 25px;
 		}
 
+@media (min-width: 1010px) {
+
+.site-header__menu-content--is-visible {
+				padding-top: 0
+		}
+	}
+
 .primary-nav {
-	padding-top: 10px;
+	padding-top: 25px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .primary-nav {
 		padding-top: 0
 }
 	}
 
-@media (min-width: 800px) {
+.primary-nav--center-list {
 
-.primary-nav--pull-right {
-			float: right
+		text-align: center;
+	}
+
+.primary-nav--center-list ul {
+			display: inline-block;
+	        margin: 0;
+	        padding: 0;
+		}
+
+.primary-nav--center-list li {
+			padding: 25px 0;
+		}
+
+@media (min-width: 1010px) {
+
+.primary-nav--center-list li {
+				padding: 43px 0
+		}
+	}
+
+@media (min-width: 1010px) {
+
+.primary-nav--center-list {
+			float: left;
+			width: 59%;
+			max-width: 1000px
 	}
 	}
 
@@ -1637,24 +1685,17 @@ Instead edit gulp/templates/sprite. */
 		padding: 0;
 	}
 
-.primary-nav ul::after {
-		content: "";
-		clear: both;
-		display: table;
-	}
-
 .primary-nav li {
 		list-style: none;
-		padding-right: 7px;
-		display: inline-block;
 	}
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .primary-nav li {
 			display: block;
 			float: left;
-			padding-right: 20px
+			padding-right: 50px;
+			display: inline-block
 	}
 	}
 
@@ -1662,28 +1703,29 @@ Instead edit gulp/templates/sprite. */
 		padding-right: 0;
 	}
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .primary-nav li:last-child {
-			padding-right: 20px
+			padding-right: 0px
 	}
 	}
 
 .primary-nav a {
-		color: #fff;
-		font-weight: 300;
+		color: #222222;
+		font-weight: 100;
 		text-decoration: none;
+		text-transform: uppercase;
 		display: block;
-		padding: 5px 8px;
-		font-size: .8rem;
-		background-color: rgba(34,34,34, .5);
+		font-size: 1.5rem;
+		margin: 0;
 	}
 
-@media (min-width: 800px) {
+@media (min-width: 1010px) {
 
 .primary-nav a {
-			padding: 12px 0;			
-			font-size: 1rem;
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: .85rem;
 			background-color: transparent
 	}
 
