@@ -7,15 +7,6 @@
 	@mixin atLarge {
 		min-height: 100px;		
 		box-shadow: 0 6px 6px -8px #222;
-	}
-
-
-	&--is-expanded {
-		background-color: #FFF;
-		box-shadow: 0 6px 6px -8px #222;
-	}
-
-	@mixin atLarge {
 		position: fixed;
 		background-color: #fff;
 
@@ -23,7 +14,16 @@
 			background-color: rgba(23, 51, 72, .85);
 		}
 	}
+
+	&--is-expanded {
+		background-color: #FFF;
+		box-shadow: 0 6px 6px -8px #222;
+	}
 	
+	&--hidden {
+		z-index: -1;
+	}
+
 	&__search-container {
 		
 		@mixin atLarge {
