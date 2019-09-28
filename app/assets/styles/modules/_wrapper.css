@@ -27,9 +27,15 @@
 
 	&__header {
 		padding: 0;
+		visibility: hidden;
+
+		@mixin atLarge {
+			visibility: visible;
+		}
 	}
 
 	&--footer {
+		position: relative;
 		min-height: 250px;
 		max-width: 1000px;
 		margin-top: 50px;
@@ -52,40 +58,10 @@
 		}
 	}
 
-	&--no-padding-until-medium {
-		padding-left: 0;
-		padding-right: 0;
-
-		@mixin atMedium {
-			padding-left: 18px;
-			padding-right: 18px;			
-		}
-	}
-
-	&--no-padding-until-large {
-		padding-left: 0;
-		padding-right: 0;
-
-		@mixin atLarge {
-			padding-left: 18px;
-			padding-right: 18px;			
-		}
-
-	&--footer {
+/*	&--footer {
 		max-width: 100%;
 		padding: 0;
 		margin: 0;
 	}
-
-	}
-
-	&--b-margin {
-
-		margin-bottom: 1rem;
-
-		@mixin atSmall {
-		margin-bottom: 3.875rem;
-		}
-	}
-
+*/
 }

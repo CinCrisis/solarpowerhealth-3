@@ -61,7 +61,7 @@
 
 	display: none;
 
-	@mixin atLarge {
+	@mixin atExLarge {
 		display: block;
 		position: absolute;
 		top: -66%;

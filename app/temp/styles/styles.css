@@ -578,6 +578,12 @@ hr{
 	margin-left: auto;
 	margin-right: auto;
 
+/*	&--footer {
+		max-width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+*/
 }
 
 .wrapper .wrapper {
@@ -601,9 +607,18 @@ hr{
 
 .wrapper__header {
 		padding: 0;
+		visibility: hidden;
+	}
+
+@media (min-width: 1010px) {
+
+.wrapper__header {
+			visibility: visible
+	}
 	}
 
 .wrapper--footer {
+		position: relative;
 		min-height: 250px;
 		max-width: 1000px;
 		margin-top: 50px;
@@ -628,52 +643,6 @@ hr{
 .wrapper--footer > div a { 
 			color: #fff;
 		}
-
-.wrapper--no-padding-until-medium {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-@media (min-width: 800px) {
-
-.wrapper--no-padding-until-medium {
-			padding-left: 18px;
-			padding-right: 18px
-	}
-	}
-
-.wrapper--no-padding-until-large {
-		padding-left: 0;
-		padding-right: 0;
-
-	}
-
-@media (min-width: 1010px) {
-
-.wrapper--no-padding-until-large {
-			padding-left: 18px;
-			padding-right: 18px
-
-	}
-	}
-
-.wrapper--no-padding-until-large--footer {
-		max-width: 100%;
-		padding: 0;
-		margin: 0;
-	}
-
-.wrapper--b-margin {
-
-		margin-bottom: 1rem;
-	}
-
-@media (min-width: 650px) {
-
-.wrapper--b-margin {
-		margin-bottom: 3.875rem
-	}
-	}
 
 .page-section {
 	padding: 3.125rem 0 3.125rem 0;
@@ -1196,51 +1165,6 @@ hr{
 	}
 */
 
-.section-title {
-	font-size: 2.55rem;
-	font-weight: 300;
-	text-align: center;
-}
-
-@media (min-width: 650px) {
-
-.section-title {
-		font-size: 3.75rem
-}
-	}
-
-.section-title strong {
-		font-weight: 500;
-	}
-
-.section-title--blue {
-		color: $#222222;
-	}
-
-.section-title--less-margin {
-		margin-bottom: 1.3rem;
-		margin-top: 0;
-	}
-
-.section-title__icon {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: .6rem;
-	}
-
-@media (min-width: 650px) {
-
-.section-title__icon {
-			position: relative;
-			top: 8px;
-			margin-right: .5rem;
-			margin-left: 0;
-			margin-bottom: 0;
-			display: inline-block
-	}
-	}
-
 .feature-item {
 	position: relative;
 	padding-bottom: 2.5rem;
@@ -1426,7 +1350,7 @@ Instead edit gulp/templates/sprite. */
 	display: none;
 }
 
-@media (min-width: 1010px) {
+@media (min-width: 1150px) {
 
 .icon--logo-empty-white {
 		display: block;
@@ -1671,6 +1595,7 @@ Instead edit gulp/templates/sprite. */
 			-webkit-transform: scale(1);
 			        transform: scale(1);
 			padding-top: 25px;
+			visibility: visible;
 		}
 
 @media (min-width: 1010px) {
@@ -1786,61 +1711,6 @@ Instead edit gulp/templates/sprite. */
 		        transform: scale(1);
 
 	}
-
-.modal {
-	position: fixed;
-	z-index: 5;
-	background-color: rgba(255, 255, 255, .94);
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transform: scale(1.2);
-	        transform: scale(1.2);
-	-webkit-transition: all .3s ease-out;
-	transition: all .3s ease-out;
-}
-
-.modal--is-visible {
-		opacity: 1;
-		visibility: visible;
-		-webkit-transform: scale(1);
-		        transform: scale(1);
-	}
-
-.modal__inner {
-		position: absolute;
-		width: 100%;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		        transform: translateY(-50%);
-	}
-
-.modal__description {
-		text-align: center;
-		font-size: 1.3rem;
-		font-weight: 300;
-		line-height: 1.65;
-	}
-
-.modal__close {
-		position: absolute;
-		top: 15px;
-		right: 15px;
-		font-size: 2rem;
-		-webkit-transform: scaleX(1.2);
-		        transform: scaleX(1.2);
-		-webkit-transform-origin: 100% 0;
-		        transform-origin: 100% 0;
-		color: #222222;
-		cursor: pointer;
-	}
-
-.modal__close:hover {
-			color: #d56954;
-		}
 
 .social-icons {
 	text-align: center;
