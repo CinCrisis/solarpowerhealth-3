@@ -1,35 +1,30 @@
 .page-section {
-	padding: 3.125rem 0 3.125rem 0;
+	padding: 3rem 0 3rem 0;
 
 	&--first {
-		padding: 3.125rem 0 3rem 0;		
+		padding: 3.125rem 0 3rem 0;
+
+		@mixin atSmall {
+			padding: 5.25rem 0 5rem 0!important;							
+		}
+	}
+
+	&--last {
+		padding: 3rem 0 2px 0!important;
+
+		@mixin atSmall {
+			padding: 5rem 0 2px 0!important;			
+		}
 	}
 
 	@mixin atSmall {
-		&--first {
-			padding: 6.125rem 0 5rem 0;
-		}
-		
-		&--last {
-			padding: 6.125rem 0 0 0;
-		}
-		
-		padding: 5.625rem 0 5.625rem 0;
+		padding: 5rem 0 5rem 0;
 	}
 
-	@mixin atMedium {	
-
-	padding: 5.625rem 0 5.625rem 0;
+/*	@mixin atMedium {	
+		padding: 5.25rem 0 5.25rem 0;
 	}	
-
-	&--last {
-		padding: 3.125rem 0 2px 0;
-
-		@mixin atSmall {
-			padding: 5.625rem 0 2px 0;			
-		}
-	}
-
+*/
 	&--no-b-padding-until-medium {
 		padding-bottom: 0;
 
@@ -60,4 +55,13 @@
 			padding: 2.5rem 0 2.5rem 0;
 		}
 	}
+}
+
+.page-section-sub {
+	padding: 3.125rem 0 0 0;
+
+	@mixin atSmall {		
+		padding: 5.625rem 0 0 0;
+	}
+
 }

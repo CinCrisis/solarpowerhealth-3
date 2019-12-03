@@ -11097,7 +11097,11 @@ var _MobileMenu = __webpack_require__(3);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _RevealOnScroll = __webpack_require__(4);
+var _MobileMenuSub = __webpack_require__(4);
+
+var _MobileMenuSub2 = _interopRequireDefault(_MobileMenuSub);
+
+var _RevealOnScroll = __webpack_require__(5);
 
 var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
@@ -11105,13 +11109,14 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _StickyHeader = __webpack_require__(5);
+var _StickyHeader = __webpack_require__(6);
 
 var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
+var mobileMenuSub = new _MobileMenuSub2.default();
 new _RevealOnScroll2.default((0, _jquery2.default)(".page-section"), "75%");
 var stickyHeader = new _StickyHeader2.default();
 
@@ -11182,6 +11187,56 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenuSub = function () {
+	function MobileMenuSub() {
+		_classCallCheck(this, MobileMenuSub);
+
+		this.headerSub = (0, _jquery2.default)(".sub-header");
+		this.menuIconSub = (0, _jquery2.default)(".sub-header__menu-icon");
+		this.menuContentSub = (0, _jquery2.default)(".sub-header__menu-content");
+		this.events();
+	}
+
+	_createClass(MobileMenuSub, [{
+		key: "events",
+		value: function events() {
+			this.menuIconSub.click(this.toggleTheMenuSub.bind(this));
+		}
+	}, {
+		key: "toggleTheMenuSub",
+		value: function toggleTheMenuSub() {
+			this.menuContentSub.toggleClass("sub-header__menu-content--is-visible");
+			this.headerSub.toggleClass("sub-header--is-expanded");
+			this.menuIconSub.toggleClass("sub-header__menu-icon--close-x");
+		}
+	}]);
+
+	return MobileMenuSub;
+}();
+
+exports.default = MobileMenuSub;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _noframework = __webpack_require__(1);
 
 var _noframework2 = _interopRequireDefault(_noframework);
@@ -11228,7 +11283,7 @@ var RevealOnScroll = function () {
 exports.default = RevealOnScroll;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

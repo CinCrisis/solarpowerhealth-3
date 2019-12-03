@@ -3,9 +3,9 @@
 	box-shadow: 0 6px 6px -8px #222;
 	position: relative;
 
-&__image {
-	display: block;
-}
+	&__image {
+		display: block;
+	}
 
 	&__img-bg {
 		width: 100%;
@@ -26,5 +26,52 @@
 		}
 	}
 
+}
+
+.masthead-sub {
+	box-shadow: 0 6px 6px -8px #222;
+	position: relative;
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin-top: 75px;
+
+		@mixin atLarge {
+			margin-top: 100px;
+		}
+
+	}
+
+	&__img-bg {
+		width: 100%;
+	}
+
+	&__inside-content {
+
+		position: absolute;
+		color: #fff;
+		font-size: 2rem;
+		font-weight: 100;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		width: 100%;
+		text-align: center;
+		z-index: 5;
+
+		@mixin atMedium {
+			font-size: 3rem;
+			font-weight: 100;			
+		}
+
+		@mixin atLarge {
+			font-size: 4rem;
+			font-weight: 100;
+			/* margin-top: -20px; */			
+		}
+
+	}
 }
 

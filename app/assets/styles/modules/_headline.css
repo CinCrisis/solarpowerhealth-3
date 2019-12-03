@@ -4,7 +4,7 @@
 		font-weight: 200;
 		color: $darkGrey;
 		margin: 0;
-		font-size: 1.75rem;
+		font-size: 2rem;
 		text-align: center;
 
 		strong {
@@ -12,7 +12,7 @@
 		}
 
 		@mixin atSmall {
-			font-size: 2.0rem;
+			font-size: 2.75rem;
 			font-weight: 100;
 		}
 
@@ -25,7 +25,22 @@
 	&__subtitle {
 		font-weight: 200;
 		color: $darkGrey;
-		font-size: 1.8rem;
+		font-size: 1.7rem;
+
+		@mixin atSmall {
+			font-size: 2.5rem;	
+			font-weight: 100;
+		}
+
+		@mixin atMedium {
+			font-size: 2.25;	
+			font-weight: 100;
+		}		
+
+		@mixin atLarge {
+			font-size: 2.25rem;
+			font-weight: 100;
+		}
 
 		&--m-until-medium {
 			margin-top: 0;
@@ -35,31 +50,36 @@
 				margin-top: 0;
 				text-align: left;
 			}
+
 		}
 
 		strong {
 			font-weight: 300;
 		}
 
-		@mixin atSmall {
-			font-size: 2.2rem;	
-			font-weight: 100;
-		}
-
 		&--wide {
-			margin-bottom: 2.5rem;
+			margin-bottom: 3.125rem;
+			margin-top: 0;
 
 			@mixin atSmall {
-				margin-bottom: 5.625rem;
+				margin-bottom: 5.25rem;
+			}
+
+			@mixin atMedium {
+				margin-bottom: 5.25rem;
 			}
 		}
 
 		&--column {
-			margin-top: 2.5rem;
+			margin-top: 3rem;
 			margin-bottom: 3rem;
 
+			@mixin atSmall {
+				margin:	5.25rem 0 5.25rem 0;
+			}
+
 			@mixin atMedium {
-				margin-top: 0;
+				margin: 0 0 3.25rem 0;
 			}
 		}
 	}
@@ -70,7 +90,7 @@
 		font-size: 1.5rem;
 
 		&--m-until-medium {
-			margin-top: 1.8rem;
+			margin-top: 3rem;
 
 			@mixin atMedium {
 				margin-top: 0;
@@ -82,8 +102,13 @@
 		}
 
 		@mixin atSmall {
-			font-size: 1.8rem;	
-			font-weight: 100;
+			font-size: 2rem;	
+			font-weight: 200;
+		}
+
+		@mixin atMedium {
+			font-size: 1.75rem;	
+			font-weight: 200;
 		}
 
 		&--wide {
@@ -92,17 +117,29 @@
 
 		&--column {
 			margin-bottom: 3rem;
-		}		
+		}
+
+		&--sub {
+			color: $mainCoral;
+			text-align: center;
+			font-size: 1.625rem;
+			margin-top: 0;
+			padding: 0.625rem 0;
+
+			@mixin atSmall {
+				font-size: 2rem;
+			}
+		}
 	}
 
-	font-weight: 200;
+/*	font-weight: 200;
 	font-size: 1.9rem;
 	color: $darkGrey;
 
 	@mixin atSmall {
 		font-size: 2.875rem;
 	}
-
+*/
 	&--centered {
 		text-align: center;
 	}
