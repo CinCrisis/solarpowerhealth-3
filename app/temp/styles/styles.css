@@ -481,14 +481,14 @@ img {
 
 .img-b-padding {
 
-	padding-bottom: 2.5rem;
+	padding-bottom: 3.125rem;
 
 }
 
 @media (min-width: 650px) {
 
 .img-b-padding {
-		padding-bottom: 3.125rem
+		padding-bottom: 5.25rem
 
 }
 	}
@@ -511,7 +511,7 @@ p {
 	margin: 0;
 }
 
-hr{
+hr {
     border:0;
     margin: 0 auto;
 /*    background-image:url('../../assets/images/icons/hr-flower.svg') no-repeat top center;
@@ -524,6 +524,27 @@ hr{
 	}
 */
 }
+
+/* Service Icons */
+
+.service-icons {
+	display: block;
+	margin: 0 auto 3.125rem auto;
+
+}
+
+/*	@mixin atSmall {
+		margin: 0 auto 5.25rem auto;
+	}
+*/
+
+@media (min-width: 800px) {
+
+.service-icons {
+		margin: auto
+
+}
+	}
 
 .masthead {
 	border-bottom: 1px solid #222222;
@@ -619,6 +640,10 @@ hr{
 			/* margin-top: -20px; */
 
 	}
+	}
+
+.masthead-sub--span-m {
+		margin: 0 50px 0 50px;
 	}
 
 .masthead:after {
@@ -819,25 +844,18 @@ hr{
 			padding: 2.5rem 0 2.5rem 0;
 		}
 
-.page-section-sub {
-	padding: 3.125rem 0 0 0;
+.page-section-p-last {
+	padding: 3rem 0 0 0;
 
 }
 
 @media (min-width: 650px) {
 
-.page-section-sub {		
-		padding: 5.625rem 0 0 0
+.page-section-p-last {		
+		padding: 5rem 0 0 0
 
 }
 	}
-
-.headline {
-
-	font-weight: 200;
-	font-size: 1.9rem;
-	color: #222222;
-}
 
 .headline__title {
 		font-weight: 200;
@@ -873,6 +891,22 @@ hr{
 		font-size: 1.7rem;
 	}
 
+@media (min-width: 650px) {
+
+.headline__subtitle {
+			font-size: 2.5rem;	
+			font-weight: 100
+	}
+	}
+
+@media (min-width: 800px) {
+
+.headline__subtitle {
+			font-size: 2.25rem;	
+			font-weight: 100
+	}
+	}
+
 .headline__subtitle--m-until-medium {
 			margin-top: 0;
 			text-align: center;
@@ -891,22 +925,6 @@ hr{
 .headline__subtitle strong {
 			font-weight: 300;
 		}
-
-@media (min-width: 650px) {
-
-.headline__subtitle {
-			font-size: 2.5rem;	
-			font-weight: 100
-	}
-	}
-
-@media (min-width: 800px) {
-
-.headline__subtitle {
-			font-size: 2rem;	
-			font-weight: 100
-	}
-	}
 
 .headline__subtitle--wide {
 			margin-bottom: 3.125rem;
@@ -928,21 +946,21 @@ hr{
 	}
 
 .headline__subtitle--column {
-			margin-top: 3rem;
-			margin-bottom: 3rem;
+			margin-top: 3.125rem;
+			margin-bottom: 3.125rem;
 		}
 
 @media (min-width: 650px) {
 
 .headline__subtitle--column {
-				margin:	5.25rem 0 5.25rem 0
+				margin:	5.25rem 0 3.125rem 0
 		}
 	}
 
 @media (min-width: 800px) {
 
 .headline__subtitle--column {
-				margin: 0 0 3.25rem 0
+				margin: 0 0 3.125rem 0
 		}
 	}
 
@@ -953,7 +971,7 @@ hr{
 	}
 
 .headline__subtitle-3--m-until-medium {
-			margin-top: 3rem;
+			margin-top: 3.125rem;
 		}
 
 @media (min-width: 800px) {
@@ -988,29 +1006,50 @@ hr{
 		}
 
 .headline__subtitle-3--column {
-			margin-bottom: 3rem;
+			padding: 0 0 3.125rem 0;
+			margin-bottom: 0;
+
+/*			@mixin atMedium {
+				padding: 0 0 1.125rem 0;
+			}
+			*/
 		}
 
 .headline__subtitle-3--sub {
 			color: #d56954;
 			text-align: center;
 			font-size: 1.625rem;
-			margin-top: 0;
-			padding: 0.625rem 0;
+			margin: 0 0 3.125rem 0;
 		}
 
 @media (min-width: 650px) {
 
 .headline__subtitle-3--sub {
-				font-size: 2rem
+				font-size: 1.75rem;
+				margin: 0 0 5.25rem 0
 		}
 	}
 
+.headline__subtitle-3--sub-service {
+			color: #d56954;
+			text-align: center;
+			font-size: 1.625rem;
+			margin: 0 0 3.125rem 0;
+		}
+
 @media (min-width: 650px) {
 
-.headline {
-		font-size: 2.875rem
-}
+.headline__subtitle-3--sub-service {
+				font-size: 1.75rem;
+				margin: 0 0 2rem 0
+		}
+	}
+
+@media (min-width: 800px) {
+
+.headline__subtitle-3--sub-left {
+				text-align: left
+		}
 	}
 
 .headline--centered {
@@ -1022,10 +1061,16 @@ hr{
 	}
 
 .headline--violet {
+		margin:	0rem 0 3.125rem 0;
 		font-size: 0.9rem;
 		color: #592147;
 
 	}
+
+/*		@mixin atSmall {
+			margin: 3.125rem 0 3.125rem 0;
+		}
+*/
 
 .headline--violet a {
 			color: #592147;
@@ -1121,6 +1166,11 @@ hr{
       margin-bottom: 0px;
     }
 
+    .row__medium-2 {
+      float: left;
+      width: 20%;
+    }
+
     .row__medium-4 {
       float: left;
       width: 33.33%;
@@ -1154,6 +1204,11 @@ hr{
 
     .row__medium-8--smaller {
       width: 63%;
+    }
+
+    .row__medium-10 {
+      float: left;
+      width: 79%;
     }
 	}
 
@@ -1263,8 +1318,15 @@ hr{
 .generic-content-container--wide-text {
 		width: 90%;
 		margin: 0 auto 0 auto;
+		padding-bottom: 2rem;
 		text-align: justify;
 		text-align-last: center;
+
+/*		@mixin atMedium {
+			margin: -1rem auto 0 auto;
+			padding: 0 0 3.25rem 0;			
+		}
+*/
 	}
 
 /*		padding: 0 0 2.5rem 0; */
@@ -1277,42 +1339,31 @@ hr{
 	}
 	}
 
-@media (min-width: 800px) {
-
-.generic-content-container--wide-text {
-/*			margin: -1rem auto 0 auto; */
-			padding: 0 0 3.25rem 0
-	}
-	}
+.generic-content-container--no-bold-a a {
+			font-weight: 100!important;
+		}
 
 .generic-content-container--left {
 		width: 90%;
 		margin: 0 auto 0 auto;
-		padding: 0 0 1.625rem 0;
+		padding: 0 0 2rem 0;
 	}
 
 .generic-content-container--left p {
 			text-align: left;
 			text-align-last: left;
-			font-size: 1.125rem;
-			font-weight: 100;
-			margin-bottom: 0;
-			padding-bottom: 1.5rem;
 		}
-
-@media (min-width: 650px) {
-
-.generic-content-container--left p {
-				font-size: 1.375rem
-		}
-	}
 
 @media (min-width: 650px) {
 
 .generic-content-container--left {
 			margin: 0 auto;
-			padding: 0 0 4.375rem 0
+			padding: 0 0 3.25rem 0
 	}
+	}
+
+.generic-content-container--more-bottom-p {
+		padding-bottom: 3.25rem;
 	}
 
 .generic-content-container--narrow {
@@ -1324,15 +1375,16 @@ hr{
 		font-weight: 200;
 		width: 100%;
 		text-align: right;
-		margin-top: 2rem;
-		margin-bottom: 0;
+		padding-top: 2rem;
+
 	}
 
 @media (min-width: 650px) {
 
 .generic-content-container--right-link {
 			font-size: 1.75rem;
-			margin-top: 3.25rem
+			padding-top: 1.125rem
+
 	}
 	}
 
@@ -1341,15 +1393,17 @@ hr{
 		font-weight: 200;
 		width: 100%;
 		text-align: left;
-		margin-top: 2rem;
-		margin-bottom: 0;		
+		margin-bottom: 0;
+		padding-top: 2rem;		
+
 	}
 
 @media (min-width: 650px) {
 
 .generic-content-container--left-link {
 			font-size: 1.75rem;
-			margin-top: 3.25rem		
+			padding-top: 1.125rem		
+
 	}
 	}
 
@@ -1363,7 +1417,6 @@ hr{
 	}
 
 .generic-content-container--blog-preview {
-		padding-top: 1.5625rem;
 		padding-left: 3rem;
 	}
 

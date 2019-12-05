@@ -57,11 +57,11 @@
 	}
 }
 
-.page-section-sub {
-	padding: 3.125rem 0 0 0;
+.page-section-p-last {
+	padding: 3rem 0 0 0;
 
 	@mixin atSmall {		
-		padding: 5.625rem 0 0 0;
+		padding: 5rem 0 0 0;
 	}
 
 }

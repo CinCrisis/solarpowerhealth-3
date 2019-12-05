@@ -26,10 +26,10 @@ img {
 
 .img-b-padding {
 
-	padding-bottom: 2.5rem;
+	padding-bottom: 3.125rem;
 
 	@mixin atSmall {
-		padding-bottom: 3.125rem;
+		padding-bottom: 5.25rem;
 	}
 
 }
@@ -51,7 +51,7 @@ p {
 	margin: 0;
 }
 
-hr{
+hr {
     border:0;
     margin: 0 auto;
 /*    background-image:url('../../assets/images/icons/hr-flower.svg') no-repeat top center;
@@ -63,4 +63,20 @@ hr{
 	    margin-bottom: 2.5rem;
 	}
 */
+}
+
+/* Service Icons */
+
+.service-icons {
+	display: block;
+	margin: 0 auto 3.125rem auto;
+
+/*	@mixin atSmall {
+		margin: 0 auto 5.25rem auto;
+	}
+*/
+	@mixin atMedium {
+		margin: auto;
+	}
+
 }
